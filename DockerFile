@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 # Set Dokcer entry
 RUN pwd
 COPY ./docker-entry.sh /code
-ENTRYPOINT ["/code/docker-entry.sh"]
+ENTRYPOINT ["python /code/parallel_test_run.py"]
