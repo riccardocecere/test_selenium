@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  test:
+    build: ./
+    environment:
+      NODE_HUB_ADDRESS: "hub"
+
+networks:
+  tc-net:
+    driver: overlay
+    external: true
