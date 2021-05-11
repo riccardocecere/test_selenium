@@ -3,7 +3,6 @@ version: '3.8'
 services:
   test:
     image: test:1.0.0
-    build: .
     environment:
       NODE_HUB_ADDRESS: "hub"
     deploy:
