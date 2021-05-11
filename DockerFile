@@ -7,10 +7,10 @@ RUN mkdir /code
 WORKDIR /code
 
 # install requirements
-COPY requirements.txt .
+COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
-# Set Dokcer entry
+# Set Docker entry
 RUN pwd
-COPY ./docker-entry.sh /code
-ENTRYPOINT ["python /code/parallel_test_run.py"]
+COPY . /code
+CMD ["python", "parallel_test_run.py"]
