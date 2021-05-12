@@ -4,7 +4,7 @@ services:
   test:
     image: test:1.0.0
     environment:
-      NODE_HUB_ADDRESS: "hub"
+      NODE_HUB_ADDRESS: "grid_hub"
     deploy:
       placement:
         constraints:
