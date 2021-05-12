@@ -12,7 +12,7 @@ services:
         constraints:
           - node.role == worker
     networks:
-      - grid-net
+      - selenium-net
     healthcheck:
       test: /opt/bin/check-grid.sh --host hub --port 4444
       interval: 15s
@@ -40,7 +40,7 @@ services:
         constraints:
           - node.role == worker
     networks:
-      - grid-net
+      - selenium-net
     
   firefox:
     image: selenium/node-firefox-debug
@@ -62,8 +62,8 @@ services:
         constraints:
           - node.role == worker
     networks:
-      - grid-net
+      - selenium-net
 
 networks:
-  grid-net:
+  selenium-net:
     driver: overlay
