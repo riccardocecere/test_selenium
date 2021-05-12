@@ -10,9 +10,9 @@ services:
         constraints:
           - "node.role==manager"
     networks:
-      - grid_grid-net
+      - grid_selenium-net
 
 networks:
-  grid_grid-net:
+  grid_selenium-net:
     driver: overlay
     external: true
