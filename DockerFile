@@ -6,6 +6,8 @@ RUN mkdir /code
 # project scope
 WORKDIR /code
 
+ENV NODE_HUB_ADDRESS="hub"
+
 # install requirements
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
