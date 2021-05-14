@@ -15,4 +15,4 @@ RUN pip install -r requirements.txt
 # Set Docker entry
 RUN pwd
 COPY . /code
-CMD ["python", "parallel_test_run.py"]
+CMD python -m pytest parallel_test_run.py
