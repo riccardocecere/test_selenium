@@ -9,7 +9,7 @@ from selenium.webdriver.common.keys import Keys
 class HackerNewsSearchTest(unittest.TestCase):
 
     def setUp(self):
-        caps = {'browserName': os.getenv('BROWSER', 'chrome')}
+        caps = {'browserName': os.getenv('BROWSER')}
         address = os.getenv('NODE_HUB_ADDRESS')
         self.browser = webdriver.Remote(
             command_executor=f'http://{address}:4444/wd/hub',
