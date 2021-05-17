@@ -16,14 +16,14 @@ class HackerNewsSearchTest(unittest.TestCase):
             desired_capabilities=caps
         )
 
-    def test_hackernews_search_for_testdrivenio(self):
-        browser = self.browser
-        browser.get('https://news.ycombinator.com')
-        search_box = browser.find_element_by_name('q')
-        search_box.send_keys('testdriven.io')
-        search_box.send_keys(Keys.RETURN)
-        time.sleep(3)  # simulate long running test
-        self.assertIn('testdriven.io', browser.page_source)
+    #def test_hackernews_search_for_testdrivenio(self):
+    #    browser = self.browser
+    #    browser.get('https://news.ycombinator.com')
+    #    search_box = browser.find_element_by_name('q')
+    #    search_box.send_keys('testdriven.io')
+    #    search_box.send_keys(Keys.RETURN)
+    #    time.sleep(3)  # simulate long running test
+    #    self.assertIn('testdriven.io', browser.page_source)
 
     def test_hackernews_search_for_selenium(self):
         browser = self.browser
