@@ -67,3 +67,4 @@ services:
 networks:
   selenium-net:
     driver: overlay
+    external: true
