@@ -12,8 +12,6 @@ ENV NODE_HUB_ADDRESS="hub"
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
-RUN ["chmod", "+x", "/opt/buildagent/temp/agentTmp/docker-shell-script-3187028531075530930.sh"]
-
 # Set Docker entry
 RUN pwd
 COPY . /code
