@@ -9,5 +9,5 @@ for counter in range(1):
     processes.append(Popen(chrome_cmd, shell=True))
     processes.append(Popen(firefox_cmd, shell=True))
 
-for counter in range(1):
+for counter in range(len(processes)):
     processes[counter].wait()
