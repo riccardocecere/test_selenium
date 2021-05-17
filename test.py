@@ -43,14 +43,14 @@ class HackerNewsSearchTest(unittest.TestCase):
         time.sleep(3)  # simulate long running test
         self.assertIn('testdriven', browser.page_source)
 
-    def test_hackernews_search_with_no_results(self):
-        browser = self.browser
-        browser.get('https://news.ycombinator.com')
-        search_box = browser.find_element_by_name('q')
-        search_box.send_keys('?*^^%')
-        search_box.send_keys(Keys.RETURN)
-        time.sleep(3)  # simulate long running test
-        self.assertNotIn('<em>', browser.page_source)
+    #def test_hackernews_search_with_no_results(self):
+    #    browser = self.browser
+    #    browser.get('https://news.ycombinator.com')
+    #    search_box = browser.find_element_by_name('q')
+    #    search_box.send_keys('?*^^%')
+    #    search_box.send_keys(Keys.RETURN)
+    #    time.sleep(3)  # simulate long running test
+    #    self.assertNotIn('<em>', browser.page_source)
 
     def tearDown(self):
         self.browser.quit()  # quit vs close?
