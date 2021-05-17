@@ -10,4 +10,4 @@ for counter in range(1):
     processes.append(Popen(firefox_cmd, shell=True))
 
 for counter in range(len(processes)+1):
-    processes[counter].wait()
+    processes[counter].run()
