@@ -7,7 +7,6 @@ RUN mkdir /code
 WORKDIR /code
 
 ENV NODE_HUB_ADDRESS="hub"
-ENV BROWSER="firefox"
 
 # install requirements
 COPY ./requirements.txt .
