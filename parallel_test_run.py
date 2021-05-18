@@ -6,8 +6,8 @@ processes = []
 for counter in range(1):
     #chrome_cmd = 'export BROWSER=chrome && python test.py'
     #firefox_cmd = 'export BROWSER=firefox && python test.py'
-    chrome_cmd = 'python -m unittest test.py chrome'
-    firefox_cmd = 'python -m unittest test.py firefox'
+    chrome_cmd = 'python test.py chrome'
+    firefox_cmd = 'python test.py firefox'
     processes.append(Popen(chrome_cmd, shell=True))
     processes.append(Popen(firefox_cmd, shell=True))
     
