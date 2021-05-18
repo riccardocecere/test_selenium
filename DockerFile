@@ -7,7 +7,6 @@ RUN mkdir /code
 WORKDIR /code
 
 ENV NODE_HUB_ADDRESS="hub"
-ENV BROWSER=""
 
 # install requirements
 COPY ./requirements.txt .
@@ -16,5 +15,5 @@ RUN pip install --upgrade -r requirements.txt
 # Set Docker entry
 RUN pwd
 COPY . /code
-CMD python parallel_test_run.py
-#CMD (export BROWSER=chrome && python -m unittest test.py) & (export BROWSER=chrome && python -m unittest test.py)
+#CMD python parallel_test_run.py
+CMD python -m unittest test.py chrome & python -m unittest test.py firefox
