@@ -17,4 +17,4 @@ RUN pip install --upgrade -r requirements.txt
 RUN pwd
 COPY . /code
 #CMD python -m unittest parallel_test_run.py
-CMD (BROWSER=chrome && python -m unittest test.py) & (BROWSER=chrome && python -m unittest test.py)
+CMD (export BROWSER=chrome && python -m unittest test.py) & (export BROWSER=chrome && python -m unittest test.py)
