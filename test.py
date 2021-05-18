@@ -58,5 +58,4 @@ class HackerNewsSearchTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    print(str(sys.argv))
     unittest.main()
