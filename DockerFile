@@ -7,6 +7,7 @@ RUN mkdir /code
 WORKDIR /code
 
 ENV NODE_HUB_ADDRESS="hub"
+ENV BROWSER=""
 
 # install requirements
 COPY ./requirements.txt .
@@ -16,4 +17,4 @@ RUN pip install --upgrade -r requirements.txt
 RUN pwd
 COPY . /code
 #CMD python -m unittest parallel_test_run.py
-CMD export BROWSER=chrome && python test.py & export BROWSER=chrome && python test.py
+CMD BROWSER=chrome && python test.py & BROWSER=chrome && python test.py
