@@ -14,5 +14,5 @@ for counter in range(1):
     #cmd = '(export BROWSER=firefox && python -m unittest test.py) & (export BROWSER=chrome && python -m unittest test.py)'
     #processes.append(Popen(cmd, shell=True))
 
-for counter in range(len(processes)+1):
+for counter in range(len(processes)):
     processes[counter].wait()
