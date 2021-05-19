@@ -2,7 +2,7 @@ import time
 import unittest
 import os
 import sys
-
+from teamcity.unittestpy import TeamcityTestRunner
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
@@ -59,4 +59,4 @@ class HackerNewsSearchTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=TeamcityTestRunner())
