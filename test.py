@@ -13,16 +13,10 @@ class HackerNewsSearchTest(unittest.TestCase):
         browser = os.getenv('BROWSER')
         caps = {'browserName': browser}
         address = os.getenv('NODE_HUB_ADDRESS')
-        if (browser == "chrome"):
-            self.browser = webdriver.Remote(
-                command_executor=f'http://{address}:4444/wd/hub',
-                desired_capabilities=caps
-            )
-        elif (browser == 'firefox'):
-            self.browser = webdriver.Remote(
-                command_executor=f'http://{address}:4444/wd/hub',
-                desired_capabilities=caps
-            )
+        self.browser = webdriver.Remote(
+            command_executor=f'http://{address}:4444/wd/hub',
+            desired_capabilities=caps
+        )
 
     def test_hackernews_search_for_testdrivenio(self):
        browser = self.browser
